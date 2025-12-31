@@ -8,78 +8,85 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  background-color: #f9fafb;
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
 .container {
-  width: 400px;
-  border: 0;
+ background-color: white;
+ border-radius: 5px;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+ width: 400px;  
 }
 
 .form {
   padding: 30px 40px;
 }
 
-h2 {
+.form h2 {
   text-align: center;
-  margin-top: 0;
+  margin: 0 0 20px;
 }
 
-.form-control {
+.input-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
 }
 
-.form-control label {
+.input-control label {
   display: block;
-  color: #777;
-  margin-bottom: 4px;
+  color:  #777;
+  margin-bottom: 5px;
 }
 
-.form-control input {
-  display: block;
+.input-control input {
   width: 100%;
-  padding: 10px;
-  border: 2px solid #f0f0f0;
+  border: 2px solid #f0f0f0f0;
   border-radius: 4px;
+  padding: 10px;
+  display: block;
   font-size: 14px;
 }
 
-.form-control small {
-  position: absolute;
-  visibility: hidden;
-  color: var(--error-color);
-  bottom: 0;
-  left: 0;
+.input-control input:focus{
+  outline: 0;
+  border-color: #777;
 }
 
-.form-control.error small {
-  visibility: visible;
-}
-
-.form-control.success input {
+.input-control.success input {
   border-color: var(--success-color);
 }
 
-.form-control.error input {
+.input-control.error input {
   border-color: var(--error-color);
 }
 
-.submit {
-  background-color: #3498db;
-  color: #fff;
-  font-size: 16px;
-  border: 2px solid #3498db;
-  border-radius: 4px;
+.input-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  color: var(--error-color);
+}
+
+.input-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  color: white;
   width: 100%;
   padding: 10px;
   cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  font-size: 16px;
   margin-top: 20px;
-
 }
