@@ -91,10 +91,23 @@ body {
   margin-top: 20px;
 }
 
+body::before {
+  content: "I am mobile size";
+  background: red;
+  display: none;
+}
+
+@media (max-width: 360px) {
+  body::before {
+    display: block;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     width: 320px;
   }
 }
+
 
 
