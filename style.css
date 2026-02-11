@@ -93,6 +93,7 @@ body {
 
 @media (max-width: 360px) {
   .container {
-    width: 350px;
+    width: 320px;
   }
 }
+
