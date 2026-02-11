@@ -91,23 +91,19 @@ body {
   margin-top: 20px;
 }
 
-body::before {
-  content: "I am mobile size";
-  background: red;
-  display: none;
-}
+body { background: red; } /* Default / Desktop */
 
-@media (max-width: 360px) {
-  body::before {
-    display: block;
-  }
-}
+@media (max-width: 450px) { body { background: orange; } } 
+@media (max-width: 400px) { body { background: yellow; } }
+@media (max-width: 380px) { body { background: green; } }
+@media (max-width: 320px) { body { background: blue; } }
 
-@media (max-width: 480px) {
+
+/* @media (max-width: 480px) {
   .container {
     width: 320px;
   }
 }
-
+ */
 
 
